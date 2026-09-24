@@ -1,0 +1,7 @@
+BeeOpt 0.7.7.e (C) 1999-2003 Andrew Filinsky
+Freeware version, Sep 2003
+
+This program calculates parameters for Bee 0.7.6 archiver utility, then better compression ratio will be available by using them. 
+
+Please, send constructed Bee.Ini file 
+to e-mail: filinsky@mail.ru

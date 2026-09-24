@@ -1,0 +1,66 @@
+This is BeeOpt 1.7.1 utility (C) 1999-2002 Andrew Filinsky
+      for Bee 0.7.x archiver (C) 1999-2002 Andrew Filinsky.
+
+USAGE:
+            BeeOpt <Ext> [<Options>]
+
+<Ext>
+            is the name of folder, which contains a set of
+            typical files with <Ext> extension. This files will
+            be used for parameters optimization.
+
+<Options> is:
+
+        -cfg<Name>
+            Use specified configuration file.
+            By default will use "<Ext>.Dat" parameters file and
+            "Bee.Ini" configuration file.
+
+        -c
+            Collect configuration files from current folder
+            and its subfolders, then place they into
+            configuration file into current folder, without
+            duplicates.
+
+        -recalculate
+            Recalculate parameters for start new optimization
+            session at next running of BeeOpt.
+
+        -merge
+            Collect all <Ext>.dat files in subfolders to one <Ext>.dat, 
+            and prepare it to recalculate.
+
+For optimization of parameters the <Ext> subfolder must
+be created, in which the set of typical files must be
+placed. Total size of files must be at least 1 mbyte.
+
+Then you can start BeeOpt, using <Ext> as parameter.
+The result of optimization will be placed in Bee.Ini
+file.
+
+At last, you can construct configuration file for Bee
+0.7.x, by starting BeeOpt with an option "-c". Send
+constructed configuration files to e-mail:
+
+            filinsky@mail.ru,
+
+then Yours configuration files will be used for reception
+of the better compression ratio by the Bee 0.7.x.
+
+EXAMPLES:
+
+      Create parameters for *.Doc files. "Doc" subfolder
+      with set of *.Doc files inside must be previously
+      created:
+
+            BeeOpt Doc
+
+      Create parameters for *.* files. "Default" folder with
+      set of different files inside must be previously
+      created:
+
+            BeeOpt Default
+
+      Construct configuration file "Bee.Ini" for Bee 0.7.x:
+
+            BeeOpt -c

@@ -1,0 +1,65 @@
+This is BeeOpt 1.6.1 utility (C) 2001 Andrew Filinsky.
+
+USAGE:
+            BeeOpt <Ext> [<Options>]
+
+<Ext>
+            is the name of folder, which contains a set of
+            typical files with <Ext> extension. This files will
+            be used for parameters optimization.
+
+<Options> is:
+
+      -d<1..5>
+            Set dictionary size (d1 < 8m, d2 (default) <
+            16m, d3 < 32m, ...)
+
+      -cfg<Name>
+            Use specified configuration file
+
+      /c
+            Collect configuration files from current folder
+            and its subfolders, then place they into
+            configuration file into current folder, without
+            duplicates.
+
+For optimization of parameters the <Ext> subfolder must
+be created, in which the set of typical files must be
+placed. Total size of files must be at least 1 mbyte.
+
+Then you can start BeeOpt, using <Ext> as parameter.
+The result of optimization will be placed in BeeOpt.Cnf
+file.
+
+At last, you can construct configuration file for Bee
+0.6.x, by starting BeeOpt with an option /c. Send
+constructed configuration files to e-mail:
+
+            filinsky@mail.ru,
+
+then Yours configuration files will be used for reception
+of the better compression ratio by the Bee 0.6.x.
+
+EXAMPLES:
+
+      Create parameters for *.Doc files. "Doc" subfolder
+      with set of *.Doc files inside must be previously
+      created:
+
+            BeeOpt Doc
+
+      Create parameters for *.Xls files, dictionary will use
+      32m of memory. "Xls" folder with set of *.Xls files
+      inside must be previously created:
+
+            BeeOpt Xls -d3
+
+      Create parameters for *.* files. "Default" folder with
+      set of different files inside must be previously
+      created:
+
+            BeeOpt Default
+
+      Construct configuration file for Bee 0.6.x:
+
+            BeeOpt /c
